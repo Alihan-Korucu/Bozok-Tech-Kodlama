@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Temelleri | Bozok Tech Kodlama</title>
 
+<style>
+body{
+    background:#0b1020;
+    color:white;
+    font-family:Arial,sans-serif;
+    line-height:1.8;
+    padding:30px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1,h2{
+    color:#7c3aed;
+}
+
+.code{
+    background:#111827;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+    overflow-x:auto;
+    color:#22c55e;
+}
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 20px;
+    background:#7c3aed;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.button:hover{
+    opacity:0.8;
+}
+
+a{
+    color:#7c3aed;
+    text-decoration:none;
+}
+
+.tip{
+    background:#1f2937;
+    border-left:4px solid #7c3aed;
+    padding:10px;
+    margin:15px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html">⬅ Ana Sayfaya Dön</a>
+
+<h1>Python Temelleri</h1>
+
+<p>
+Python dünyanın en popüler programlama dillerinden biridir.
+Yapay zeka, veri bilimi, web geliştirme ve otomasyon alanlarında kullanılır.
+</p>
+
+<div class="tip">
+💡 Python'un en büyük avantajı okunabilir ve öğrenmesi kolay olmasıdır.
+</div>
+
+<h2>1. Ekrana Yazı Yazdırma</h2>
+
+<div class="code">
+print("Merhaba Dünya")
+</div>
+
+<p>print() komutu ekrana çıktı verir.</p>
+
+<h2>2. Değişkenler</h2>
+
+<div class="code">
+isim = "Ali"
+yas = 15
+
+print(isim)
+print(yas)
+</div>
+
+<p>Verileri saklamak için değişkenler kullanılır.</p>
+
+<h2>3. Veri Tipleri</h2>
+
+<div class="code">
+isim = "Ali"      # String
+yas = 15          # Integer
+boy = 1.75        # Float
+aktif = True      # Boolean
+</div>
+
+<h2>4. Kullanıcıdan Veri Alma</h2>
+
+<div class="code">
+isim = input("Adınız: ")
+
+print("Merhaba", isim)
+</div>
+
+<h2>5. Matematik İşlemleri</h2>
+
+<div class="code">
+a = 10
+b = 5
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+</div>
+
+<h2>6. If Else Kullanımı</h2>
+
+<div class="code">
+yas = 18
+
+if yas >= 18:
+    print("Ehliyet alabilirsiniz")
+else:
+    print("Yaşınız yetmiyor")
+</div>
+
+<h2>7. For Döngüsü</h2>
+
+<div class="code">
+for i in range(5):
+    print(i)
+</div>
+
+<p>0'dan 4'e kadar sayıları yazdırır.</p>
+
+<h2>8. While Döngüsü</h2>
+
+<div class="code">
+sayi = 0
+
+while sayi < 5:
+    print(sayi)
+    sayi += 1
+</div>
+
+<h2>9. Listeler</h2>
+
+<div class="code">
+meyveler = ["Elma", "Muz", "Çilek"]
+
+print(meyveler[0])
+</div>
+
+<p>Birden fazla veriyi tek değişkende tutar.</p>
+
+<h2>10. Liste Döngüsü</h2>
+
+<div class="code">
+meyveler = ["Elma","Muz","Çilek"]
+
+for meyve in meyveler:
+    print(meyve)
+</div>
+
+<h2>11. Fonksiyonlar</h2>
+
+<div class="code">
+def selamla():
+    print("Merhaba")
+
+selamla()
+</div>
+
+<h2>12. Parametreli Fonksiyon</h2>
+
+<div class="code">
+def selamla(isim):
+    print("Merhaba", isim)
+
+selamla("Ali")
+</div>
+
+<h2>13. Return Kullanımı</h2>
+
+<div class="code">
+def topla(a,b):
+    return a+b
+
+sonuc = topla(5,3)
+
+print(sonuc)
+</div>
+
+<h2>14. Sözlükler (Dictionary)</h2>
+
+<div class="code">
+ogrenci = {
+    "isim":"Ali",
+    "yas":15
+}
+
+print(ogrenci["isim"])
+</div>
+
+<h2>15. Try Except</h2>
+
+<div class="code">
+try:
+    sayi = int(input("Sayı: "))
+except:
+    print("Geçersiz giriş")
+</div>
+
+<h2>16. Dosya Yazma</h2>
+
+<div class="code">
+dosya = open("not.txt","w")
+
+dosya.write("Merhaba")
+
+dosya.close()
+</div>
+
+<h2>17. Dosya Okuma</h2>
+
+<div class="code">
+dosya = open("not.txt","r")
+
+print(dosya.read())
+
+dosya.close()
+</div>
+
+<h2>18. Modül Kullanımı</h2>
+
+<div class="code">
+import random
+
+print(random.randint(1,10))
+</div>
+
+<h2>19. Sınıflar (OOP)</h2>
+
+<div class="code">
+class Araba:
+
+    def __init__(self, marka):
+        self.marka = marka
+
+araba = Araba("BMW")
+
+print(araba.marka)
+</div>
+
+<h2>20. Yapay Zeka İçin Python</h2>
+
+<div class="code">
+import numpy as np
+
+sayilar = np.array([1,2,3])
+
+print(sayilar)
+</div>
+
+<p>
+NumPy, Pandas, TensorFlow ve PyTorch gibi kütüphaneler
+Python'u yapay zeka alanında çok güçlü hale getirir.
+</p>
+
+<h2>Mini Proje 1 - Sayı Tahmin Oyunu</h2>
+
+<div class="code">
+import random
+
+hedef = random.randint(1,10)
+
+tahmin = int(input("Tahmin: "))
+
+if tahmin == hedef:
+    print("Kazandın!")
+else:
+    print("Kaybettin!")
+</div>
+
+<h2>Mini Proje 2 - Hesap Makinesi</h2>
+
+<div class="code">
+a = int(input("1. sayı: "))
+b = int(input("2. sayı: "))
+
+print("Toplam =", a+b)
+</div>
+
+<div class="tip">
+🚀 Tebrikler! Python temellerini öğrendin.
+Şimdi projeler geliştirerek kendini geliştirebilirsin.
+</div>
+
+<a class="button" href="html.html">
+← Önceki Ders
+</a>
+
+</div>
+
+</body>
+</html>
