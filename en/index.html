@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bozok Tech Coding</title>
 
+ <div class="language">
+    <a href="index.html">🇹🇷 Türkçe</a>
+    |
+    <a href="en/index.html">🇬🇧 English</a>
+</div>
+
+ .card a{
+    color:#7c3aed;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    color:white;
+}
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0b1020;
+    color:white;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#7c3aed;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#7c3aed;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:50px;
+    padding:120px 40px 50px;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#7c3aed;
+}
+
+.hero-text p{
+    font-size:20px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#7c3aed;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+.hero img{
+    width:450px;
+    max-width:100%;
+    border-radius:20px;
+}
+
+section{
+    padding:100px 30px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#111827;
+    width:250px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#7c3aed;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#7c3aed;
+    text-decoration:none;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:40px;
+}
+
+nav{
+    flex-direction:column;
+    gap:10px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Bozok Tech Coding</div>
+
+    <ul>
+        <li><a href="#anasayfa">Ana Sayfa</a></li>
+        <li><a href="#dersler">Dersler</a></li>
+        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+</nav>
+
+<section id="anasayfa" class="hero">
+
+    <div class="hero-text">
+        <h1>Bozok Tech Kodlama'ya <span>Hoş Geldiniz</span></h1>
+
+        <p>
+            HTML, CSS, JavaScript ve Python dersleri ile
+            sıfırdan yazılım öğrenin.
+        </p>
+
+        <a href="html.html" class="btn">İlk Derse Başla</a>
+    </div>
+
+    <!-- BURAYA GÖRSELİNİ KOYACAĞIZ -->
+    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1000"
+         alt="Kodlama">
+</section>
+
+<section id="dersler">
+
+<h2 class="title">Popüler Derslerimiz</h2>
+
+<div class="cards">
+
+    <div class="card">
+<h3><a href="html.html">HTML Temelleri</a></h3>
+<p>Web sayfalarının temelini öğren.</p>
+</div>
+
+<div class="card">
+<h3><a href="css.html">CSS Temelleri</a></h3>
+<p>Modern tasarımlar oluştur.</p>
+</div>
+
+<div class="card">
+<h3><a href="javascript.html">JavaScript Temelleri</a></h3>
+<p>Etkileşimli siteler geliştir.</p>
+</div>
+
+<div class="card">
+<h3><a href="python.html">Python Temelleri</a></h3>
+<p>Programlamaya güçlü bir başlangıç yap.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projeler">
+
+<h2 class="title">Projeler</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Portföy Sitesi</h3>
+<p>Kendi kişisel web siteni oluştur.</p>
+</div>
+
+<div class="card">
+<h3>Hesap Makinesi</h3>
+<p>JavaScript ile hesap makinesi yap.</p>
+</div>
+
+<div class="card">
+<h3>To-Do List</h3>
+<p>Görev takip uygulaması geliştir.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="hakkimizda">
+
+<h2 class="title">Hakkımızda</h2>
+
+<div class="about">
+Bozok Tech Kodlama, yazılım öğrenmek isteyen herkes için
+ücretsiz ve anlaşılır eğitimler sunmayı amaçlayan bir
+topluluktur. Amacımız gençleri teknoloji ile buluşturmak
+ve gerçek projeler geliştirerek öğrenmelerini sağlamaktır.
+</div>
+
+</section>
+
+<section id="iletisim">
+
+<h2 class="title">İletişim</h2>
+
+<div class="contact">
+<p>E-posta: info@bozoktech.com</p>
+<p>GitHub: github.com/Alihan-Korucu</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Bozok Tech Kodlama - Tüm Hakları Saklıdır
+</footer>
+
+</body>
+</html>
