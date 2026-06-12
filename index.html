@@ -1,292 +1,98 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bozok Tech Kodlama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bozok Tech Kodlama</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+        body { font-family:Arial, sans-serif; background:#0b1020; color:white; }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+        /* Navigasyon */
+        nav { position:fixed; top:0; width:100%; background:#111827; display:flex; justify-content:space-between; align-items:center; padding:15px 40px; z-index:1000; }
+        .logo { font-size:24px; font-weight:bold; color:#7c3aed; }
+        nav ul { display:flex; list-style:none; gap:25px; }
+        nav a { color:white; text-decoration:none; transition:0.3s; }
+        nav a:hover { color:#7c3aed; }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#0b1020;
-    color:white;
-}
+        /* Hero */
+        .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:50px; padding:120px 40px 50px; }
+        .hero-text { max-width:500px; }
+        .hero-text h1 { font-size:60px; margin-bottom:20px; }
+        .hero-text span { color:#7c3aed; }
+        .btn { display:inline-block; margin-top:25px; padding:14px 28px; background:#7c3aed; color:white; border-radius:10px; text-decoration:none; }
 
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#111827;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    z-index:1000;
-}
+        /* Dersler */
+        section { padding:100px 30px; }
+        .title { text-align:center; margin-bottom:50px; font-size:40px; }
+        .cards { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+        
+        .card { 
+            background:#111827; width:250px; padding:25px; border-radius:15px; 
+            text-align:center; transition:0.3s; color: white; text-decoration: none; display: block; border: 2px solid transparent;
+        }
+        .card:hover { transform:translateY(-10px); border-color: #7c3aed; cursor: pointer; }
+        .card h3 { margin-bottom:10px; color:#7c3aed; }
 
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    color:#7c3aed;
-}
+        /* Ders Detay Bölümü (Gizli gelir) */
+        .lesson-content { display:none; max-width: 800px; margin: 40px auto; padding: 30px; background: #111827; border-radius: 15px; }
+        .level { margin-bottom: 20px; padding: 15px; background: #1f2937; border-radius: 10px; border-left: 5px solid #7c3aed; }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#7c3aed;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:50px;
-    padding:120px 40px 50px;
-}
-
-.hero-text{
-    max-width:500px;
-}
-
-.hero-text h1{
-    font-size:60px;
-    margin-bottom:20px;
-}
-
-.hero-text span{
-    color:#7c3aed;
-}
-
-.hero-text p{
-    font-size:20px;
-    line-height:1.6;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 28px;
-    background:#7c3aed;
-    color:white;
-    border-radius:10px;
-    text-decoration:none;
-}
-
-.hero img{
-    width:450px;
-    max-width:100%;
-    border-radius:20px;
-}
-
-section{
-    padding:100px 30px;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:40px;
-}
-
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.card{
-    background:#111827;
-    width:250px;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#7c3aed;
-}
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    line-height:1.8;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact a{
-    color:#7c3aed;
-    text-decoration:none;
-}
-
-footer{
-    background:#111827;
-    text-align:center;
-    padding:25px;
-}
-
-@media(max-width:768px){
-
-.hero-text h1{
-    font-size:40px;
-}
-
-nav{
-    flex-direction:column;
-    gap:10px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-}
-</style>
+        footer { background:#111827; text-align:center; padding:25px; }
+    </style>
 </head>
-
 <body>
 
 <nav>
     <div class="logo">Bozok Tech Kodlama</div>
-
     <ul>
         <li><a href="#anasayfa">Ana Sayfa</a></li>
         <li><a href="#dersler">Dersler</a></li>
-        <li><a href="#projeler">Projeler</a></li>
-        <li><a href="#hakkimizda">Hakkımızda</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
     </ul>
 </nav>
 
 <section id="anasayfa" class="hero">
-
     <div class="hero-text">
         <h1>Bozok Tech Kodlama'ya <span>Hoş Geldiniz</span></h1>
-
-        <p>
-            HTML, CSS, JavaScript ve Python dersleri ile
-            sıfırdan yazılım öğrenin.
-        </p>
-
+        <p>HTML, CSS, JavaScript ve Python dersleri ile sıfırdan yazılım öğrenin.</p>
         <a href="#dersler" class="btn">Derslere Başla</a>
     </div>
-
-    <!-- BURAYA GÖRSELİNİ KOYACAĞIZ -->
-    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1000"
-         alt="Kodlama">
 </section>
 
 <section id="dersler">
+    <h2 class="title">Popüler Derslerimiz</h2>
+    <div class="cards">
+        <div class="card" onclick="showLesson('HTML')"><h3>HTML</h3><p>Web'in temeli.</p></div>
+        <div class="card" onclick="showLesson('CSS')"><h3>CSS</h3><p>Modern tasarımlar.</p></div>
+        <div class="card" onclick="showLesson('JS')"><h3>JavaScript</h3><p>Etkileşim ekle.</p></div>
+        <div class="card" onclick="showLesson('Python')"><h3>Python</h3><p>Algoritma kur.</p></div>
+    </div>
 
-<h2 class="title">Popüler Derslerimiz</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>HTML</h3>
-<p>Web sayfalarının temelini öğren.</p>
-</div>
-
-<div class="card">
-<h3>CSS</h3>
-<p>Modern tasarımlar oluştur.</p>
-</div>
-
-<div class="card">
-<h3>JavaScript</h3>
-<p>Etkileşimli siteler geliştir.</p>
-</div>
-
-<div class="card">
-<h3>Python</h3>
-<p>Programlamaya güçlü bir başlangıç yap.</p>
-</div>
-
-</div>
-
+    <div id="lesson-detail" class="lesson-content">
+        <h2 id="lesson-title" style="color:#7c3aed; margin-bottom: 20px;">Ders Başlığı</h2>
+        <div class="level"><h3>🔰 Temel Seviye</h3><p id="temel-metin">Buraya temel içerik gelecek.</p></div>
+        <div class="level"><h3>🚀 Orta Seviye</h3><p id="orta-metin">Buraya orta içerik gelecek.</p></div>
+        <div class="level"><h3>🏆 Gelişmiş Seviye</h3><p id="ileri-metin">Buraya gelişmiş içerik gelecek.</p></div>
+        <button onclick="document.getElementById('lesson-detail').style.display='none'" class="btn">Kapat</button>
+    </div>
 </section>
 
-<section id="projeler">
+<script>
+    function showLesson(lesson) {
+        const detail = document.getElementById('lesson-detail');
+        const title = document.getElementById('lesson-title');
+        
+        title.innerText = lesson + " Ders İçeriği";
+        document.getElementById('temel-metin').innerText = "Temel: " + lesson + " dünyasına giriş ve kurulum.";
+        document.getElementById('orta-metin').innerText = "Orta: " + lesson + " ile işlevsel araçlar yapımı.";
+        document.getElementById('ileri-metin').innerText = "Gelişmiş: " + lesson + " projelerinde profesyonel yaklaşımlar.";
+        
+        detail.style.display = 'block';
+        detail.scrollIntoView({behavior: "smooth"});
+    }
+</script>
 
-<h2 class="title">Projeler</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Portföy Sitesi</h3>
-<p>Kendi kişisel web siteni oluştur.</p>
-</div>
-
-<div class="card">
-<h3>Hesap Makinesi</h3>
-<p>JavaScript ile hesap makinesi yap.</p>
-</div>
-
-<div class="card">
-<h3>To-Do List</h3>
-<p>Görev takip uygulaması geliştir.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="hakkimizda">
-
-<h2 class="title">Hakkımızda</h2>
-
-<div class="about">
-Bozok Tech Kodlama, yazılım öğrenmek isteyen herkes için
-ücretsiz ve anlaşılır eğitimler sunmayı amaçlayan bir
-topluluktur. Amacımız gençleri teknoloji ile buluşturmak
-ve gerçek projeler geliştirerek öğrenmelerini sağlamaktır.
-</div>
-
-</section>
-
-<section id="iletisim">
-
-<h2 class="title">İletişim</h2>
-
-<div class="contact">
-<p>E-posta: info@bozoktech.com</p>
-<p>GitHub: github.com/Alihan-Korucu</p>
-</div>
-
-</section>
-
-<footer>
-© 2026 Bozok Tech Kodlama - Tüm Hakları Saklıdır
-</footer>
+<footer>© 2026 Bozok Tech Kodlama</footer>
 
 </body>
 </html>
