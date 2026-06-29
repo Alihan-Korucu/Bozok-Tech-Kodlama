@@ -390,3 +390,312 @@ RESPONSIVE
 }
 
 }
+/*====================================
+POPÜLER DERSLER
+====================================*/
+
+.courses{
+text-align:center;
+}
+
+.section-title{
+font-size:52px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.section-title span{
+color:#7c3aed;
+}
+
+.section-text{
+color:#cbd5e1;
+font-size:18px;
+max-width:700px;
+margin:0 auto 60px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.course-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:35px 28px;
+text-align:left;
+transition:.35s;
+backdrop-filter:blur(15px);
+position:relative;
+overflow:hidden;
+}
+
+.course-card::before{
+content:"";
+position:absolute;
+top:-50%;
+right:-50%;
+width:200px;
+height:200px;
+background:rgba(255,255,255,.05);
+border-radius:50%;
+}
+
+.course-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,.35);
+}
+
+.course-card i{
+font-size:58px;
+margin-bottom:20px;
+}
+
+.course-card h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.course-card p{
+color:#cbd5e1;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.course-card a{
+display:inline-flex;
+align-items:center;
+gap:8px;
+font-weight:600;
+transition:.3s;
+}
+
+.course-card a:hover{
+transform:translateX(6px);
+}
+
+/* HTML */
+.course-card.html i{
+color:#f97316;
+}
+
+.course-card.html a{
+color:#f97316;
+}
+
+.course-card.html:hover{
+border-color:rgba(249,115,22,.4);
+}
+
+/* CSS */
+.course-card.css i{
+color:#2563eb;
+}
+
+.course-card.css a{
+color:#2563eb;
+}
+
+.course-card.css:hover{
+border-color:rgba(37,99,235,.4);
+}
+
+/* JavaScript */
+.course-card.js i{
+color:#facc15;
+}
+
+.course-card.js a{
+color:#facc15;
+}
+
+.course-card.js:hover{
+border-color:rgba(250,204,21,.4);
+}
+
+/* Python */
+.course-card.python i{
+color:#22c55e;
+}
+
+.course-card.python a{
+color:#22c55e;
+}
+
+.course-card.python:hover{
+border-color:rgba(34,197,94,.4);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.section-title{
+font-size:38px;
+}
+
+.course-card{
+text-align:center;
+}
+
+}
+/*====================================
+POPÜLER DERSLER
+====================================*/
+
+.courses{
+    padding:120px 8%;
+}
+
+.section-title{
+    font-size:48px;
+    text-align:center;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.section-title span{
+    color:#7c3aed;
+}
+
+.section-text{
+    text-align:center;
+    color:#94a3b8;
+    font-size:18px;
+    max-width:700px;
+    margin:0 auto 60px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:30px;
+}
+
+.course-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:40px 30px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.course-card::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    top:-120px;
+    right:-120px;
+    opacity:.15;
+    transition:.4s;
+}
+
+.course-card:hover::before{
+    transform:scale(1.3);
+}
+
+.course-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+.course-card i{
+    font-size:60px;
+    margin-bottom:25px;
+}
+
+.course-card h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.course-card p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.course-card a{
+    color:white;
+    font-weight:600;
+    display:inline-block;
+    transition:.3s;
+}
+
+.course-card:hover a{
+    transform:translateX(8px);
+}
+
+/* HTML */
+
+.html{
+    border-top:5px solid #e34c26;
+}
+
+.html::before{
+    background:#e34c26;
+}
+
+.html i{
+    color:#e34c26;
+}
+
+/* CSS */
+
+.css{
+    border-top:5px solid #2965f1;
+}
+
+.css::before{
+    background:#2965f1;
+}
+
+.css i{
+    color:#2965f1;
+}
+
+/* JavaScript */
+
+.js{
+    border-top:5px solid #f7df1e;
+}
+
+.js::before{
+    background:#f7df1e;
+}
+
+.js i{
+    color:#f7df1e;
+}
+
+/* Python */
+
+.python{
+    border-top:5px solid #4caf50;
+}
+
+.python::before{
+    background:#4caf50;
+}
+
+.python i{
+    color:#4caf50;
+}
+
+@media(max-width:900px){
+
+.section-title{
+    font-size:38px;
+}
+
+.course-card{
+    text-align:center;
+}
+
+}
