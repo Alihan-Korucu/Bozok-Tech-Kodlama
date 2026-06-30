@@ -1038,3 +1038,54 @@ FOOTER
         align-items:center;
     }
 }
+/*==============================
+YUKARI ÇIK BUTONU
+==============================*/
+
+.scroll-top{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:60px;
+    height:60px;
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    box-shadow:0 15px 35px rgba(124,58,237,.45);
+    transition:.35s;
+    z-index:9999;
+}
+
+.scroll-top:hover{
+    transform:translateY(-6px) scale(1.08);
+    box-shadow:0 20px 40px rgba(124,58,237,.6);
+/*==============================
+YUKARI ÇIK BUTONU
+==============================*/
+
+.scroll-top{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:60px;
+    height:60px;
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    box-shadow:0 15px 35px rgba(124,58,237,.45);
+    transition:.35s;
+    z-index:9999;
+}
+
+.scroll-top:hover{
+    transform:translateY(-6px) scale(1.08);
+    box-shadow:0 20px 40px rgba(124,58,237,.6);
+}
