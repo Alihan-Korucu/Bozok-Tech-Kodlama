@@ -825,3 +825,59 @@ PROJELER
     display:inline-block;
     transform:translateX(8px);
 }
+/*==============================
+İLETİŞİM
+==============================*/
+
+.contact{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#94a3b8;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.contact-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:35px;
+    transition:.35s;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+    border-color:#7c3aed;
+}
+
+.contact-card i{
+    font-size:42px;
+    color:#7c3aed;
+    margin-bottom:20px;
+}
+
+.contact-card h3{
+    margin-bottom:10px;
+}
+
+.contact-card a{
+    color:#cbd5e1;
+}
+
+.contact-card a:hover{
+    color:#7c3aed;
+}
