@@ -891,7 +891,11 @@ HAKKIMIZDA
     align-items:center;
     padding:120px 8%;
 }
-
+.about-left{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
 .about-badge{
     display:inline-block;
     background:rgba(124,58,237,.15);
