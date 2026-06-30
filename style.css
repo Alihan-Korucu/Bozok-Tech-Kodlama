@@ -880,3 +880,87 @@ PROJELER
 .contact-card a:hover{
     color:#7c3aed;
 }
+/*==============================
+HAKKIMIZDA
+==============================*/
+
+.about{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:70px;
+    align-items:center;
+    padding:120px 8%;
+}
+
+.about-badge{
+    display:inline-block;
+    background:rgba(124,58,237,.15);
+    color:#a78bfa;
+    padding:10px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+.about h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.about h2 span{
+    color:#7c3aed;
+}
+
+.about p{
+    color:#cbd5e1;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.about-right{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.about-box{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+    transition:.35s;
+}
+
+.about-box:hover{
+    transform:translateY(-10px);
+    border-color:#7c3aed;
+    box-shadow:0 20px 40px rgba(124,58,237,.25);
+}
+
+.about-box i{
+    font-size:40px;
+    color:#7c3aed;
+    margin-bottom:18px;
+}
+
+.about-box h3{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.about-box p{
+    margin:0;
+    color:#94a3b8;
+}
+
+@media(max-width:900px){
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.about-right{
+    grid-template-columns:1fr 1fr;
+}
+
+}
